@@ -1,24 +1,27 @@
-# manhwalist
+# ManhwaList
 
-## Project setup
-```
-npm install
-```
+Website focused on manhwa reviews, rankings and lists.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## See website on live
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- Unavailable for now (in construction)
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Technologies Used
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![Node](https://img.shields.io/badge/-NodeJS-black?style=for-the-badge&logo=node.js)
+![VUE](https://img.shields.io/badge/-Vuejs-black?style=for-the-badge&logo=vue.js)
+![SASS](https://img.shields.io/badge/-SASS-black?style=for-the-badge&logo=sass)
+![Java](https://img.shields.io/badge/-Java-black?style=for-the-badge&logo=openjdk)
+![mariadb](https://img.shields.io/badge/-mariadb-black?style=for-the-badge&logo=mariadb)
+
+## Pictures of the Project
+
+<div align="center">
+
+Unavailable for now (in construction)
+
+</div>
+
+## License
+
+[MIT License](./LICENSE) © [Gabriel Silveira](http://gabrielsilveira.tk/)
