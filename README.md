@@ -1,6 +1,6 @@
-# ManhwaList
+# kirin
 
-Website focused on manhwa reviews, rankings and lists.
+Website focused on animes and mangas/manhwas reviews, rankings and lists.
 
 ## See website on live
 
