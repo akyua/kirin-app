@@ -1,78 +1,83 @@
 <template>
-    <div id="content" ref="content" :style="{ backgroundImage: `url(${currentAnime.image})` }">
-        <Header />
-        <main>
-            <h1>{{  currentAnime.title }}</h1>
-            <p>{{ currentAnime.description }}</p>
-            <p>Nota: {{ currentAnime.rating }}</p>
-        </main>
-    </div>
+  <Carousel class="carousel">
+    <Header />
+    <Slide v-for="(slide, index) in carouselSlides" :key="index">
+      <div class="slide-info">
+        <img :src="getFile(slide)" alt="">
+      </div>
+    </Slide>
+  </Carousel>
 </template>
-
-<script>
-import Header from '../components/Header.vue'
-
-export default{
+  
+  <script>
+  import Header from '../components/Header.vue';
+  import Carousel from '../components/Carousel.vue';
+  import Slide from '../components/Slide.vue';
+  
+  export default {
     name: 'Home',
-    components: { Header },
-    data(){
-        return {
-            animes: [
-                {
-                    title: 'Jujutsu Kaisen',
-                    image: 'wallpaper.jpg',
-                    description: 'jujutsu é um anime bom etc etc etc',
-                    rating: 9.0
-                },
-                {
-                    title: 'One Piece',
-                    description: 'onepiece etcetc',
-                    image: 'wallpaper7.png',
-                    rating: 9.2
-                },
-                {
-                    title: 'Hunter x Hunter',
-                    description: 'hxh é bom pkrl',
-                    image: 'hxh.jpg',
-                    rating: 9.8
-                }
-            ],
-            currentIndex: 0
-        };
+    components: { Header, Carousel, Slide },
+    setup() {
+      const carouselSlides = ["hxh", "onepiece", "jjk"];
+
+      return { carouselSlides };
     },
-    computed: {
-        currentAnime(){
-            return this.animes[this.currentIndex]
-        }
-    },
-    created(){
-        this.rotateAnime();
+    data() {
+      return {
+        animes: [
+          {
+            title: 'Jujutsu Kaisen',
+            image: 'wallpaper.jpg',
+            description: 'jujutsu é um anime bom etc etc etc',
+            rating: 9.0
+          },
+          {
+            title: 'One Piece',
+            description: 'one piece etc etc',
+            image: 'wallpaper7.png',
+            rating: 9.2
+          },
+          {
+            title: 'Hunter x Hunter',
+            description: 'hxh é bom pra caramba',
+            image: 'hxh.jpg',
+            rating: 9.8
+          }
+        ],
+      };
     },
     methods: {
-        rotateAnime() {
-            setInterval(() => {
-            this.$refs.content.style.opacity = 0; // Diminui a opacidade
-            setTimeout(() => {
-                this.currentIndex = (this.currentIndex + 1) % this.animes.length;
-                this.$refs.content.style.opacity = 1; // Restaura a opacidade
-            }, 1000); // Mude de anime após 1 segundo de transição de opacidade
-            }, 10000); // 10 segundos
+      getFile(file){
+        return `${file}.jpg`;
+      }
+    }
+  }
+  </script>
+  
+  <style lang="scss" scoped>
+    .carousel{
+      position: relative;
+      max-height: 100vh;
+      height: 100vh;
+    
+      .slide-info{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-height: 100%;
+        height: 100%;
+
+        img {
+          min-width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
+      }
+      & > Header {
+        position: relative;
+        z-index: 2;
+      }
     }
-
-}
-</script>
-
-<style>
-    main{
-        height: 90vh;
-    }
-
-    #content{
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 1;
-        transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
-    }
-</style>
+  </style>
+  
