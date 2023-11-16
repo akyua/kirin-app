@@ -10,9 +10,24 @@
                         <h3 class="season">1 Season</h3>
                         <h2>Sousou no Frieren</h2>
                         <p class="synopsis">The story follows elven mage Frieren, a former member of the party of adventurers who defeated the Demon King and restored harmony to the world after a ten-years-quest.</p>
+                        <div class="rating">
+                            <img class="icon-star" src="../assets/star.png" alt="icon star">
+                            <div>
+                                <h3>Rating</h3>
+                                <h3 class="rating-score">9.0/10</h3>
+                            </div>
+                        </div>
+                        <div class="buttons-info">
+                            <div class="button-watch">
+                                <p>Watch Now</p>
+                            </div> 
+                            <div class="button-add">
+                                <p>Add to List</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item">
+               <!--  <div class="carousel-item">
                     <img src="@/assets/jjk.jpg" class="image d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h3 class="season">2 Season</h3>
@@ -27,7 +42,7 @@
                         <h2>Attack on Titan</h2>
                         <p class="synopsis">The story follows Eren Yeager, who vows to exterminate the Titans after they bring about the destruction of his hometown and the death of his mother.</p>
                     </div>
-                </div>
+                </div> -->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -49,7 +64,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .image {
     object-fit: cover;
     width: 100%;
@@ -64,7 +79,7 @@ export default {
 
 .synopsis{
     max-width: 700px;
-    font-size: 22px;    
+    font-size: 22px;
 }
 
 .season{
@@ -80,5 +95,13 @@ h2{
     font-weight: 600;
     text-transform: uppercase;
     font-size: 42px;
+}
+
+.rating{
+    display: flex;
+    align-items: center;
+    .icon-star{
+        width: 100px;
+    }
 }
 </style>
