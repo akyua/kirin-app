@@ -1,30 +1,24 @@
 <template>
-    <div id="content">
-        <Header />
-        <main>
-
-        </main>
-    </div>
+  <Carousel />
+  
 </template>
 
 <script>
-import Header from '../components/Header.vue'
+import Carousel from '../components/Carousel.vue';
 
-export default{
-    name: 'Home',
-    components: { Header },
+export default {
+  name: 'Home',
+  components: { Carousel}
 }
 </script>
 
 <style>
-    main{
-        height: 90vh;
-    }
+.Header{
+  z-index: 2;
+}
 
-    #content{
-        background-image: url('../assets/wallpaper7.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+.Carousel{
+  z-index: 1;
+}
+
 </style>
