@@ -18,14 +18,14 @@
                             </div>
                         </div>
                         <div class="buttons-info">
-                            <div class="button-watch">
+                            <button class="button-watch">
                                 <img src="../assets/play.png" alt="play-icon">
                                 <p>Watch Now</p>
-                            </div> 
-                            <div class="button-add">
+                            </button> 
+                            <button class="button-add">
                                 <img src="../assets/add.png" alt="add-icon">
                                 <p>Add to List</p>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -43,14 +43,14 @@
                             </div>
                         </div>
                         <div class="buttons-info">
-                            <div class="button-watch">
+                            <button class="button-watch">
                                 <img src="../assets/play.png" alt="play-icon">
                                 <p>Watch Now</p>
-                            </div> 
-                            <div class="button-add">
+                            </button> 
+                            <button class="button-add">
                                 <img src="../assets/add.png" alt="add-icon">
                                 <p>Add to List</p>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -68,14 +68,14 @@
                             </div>
                         </div>
                         <div class="buttons-info">
-                            <div class="button-watch">
+                            <button class="button-watch">
                                 <img src="../assets/play.png" alt="play-icon">
                                 <p>Watch Now</p>
-                            </div> 
-                            <div class="button-add">
+                            </button> 
+                            <button class="button-add">
                                 <img src="../assets/add.png" alt="add-icon">
                                 <p>Add to List</p>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div> 
@@ -134,6 +134,7 @@ export default {
 }
 
 h2{
+    color: white;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 58px;
@@ -166,6 +167,8 @@ h2{
     flex-direction: row;
     gap: 40px;
     .button-watch{
+        border: 0;
+        color: white;
         background-color: red;
         display: flex;
         gap: 10px;
@@ -185,6 +188,8 @@ h2{
 
     }
     .button-add{
+        border: 0;
+        color: white;
         background-color: rgba(44, 44, 44, 0.795);
         align-items: center;
         font-size: 20px;
