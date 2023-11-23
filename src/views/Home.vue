@@ -3,23 +3,24 @@
   <LandingComponent :title="animeRelease" :items="animeReleaseItems"/>
   <LandingComponent :title="animeUpcoming" :items="animeUpcomingItems"/>
   <LandingComponent :title="animeAllTime" :items="animeAllTimeItems"/>
-  <AllTime />
-  <Suggestions />
+  <LandingComponent :title="animeSuggestion" :items="animeSuggestionItems" />
   <Footer />
 </template>
 
 <script>
 import Carousel from '../components/Carousel.vue';
 import LandingComponent from '../components/LandingComponent.vue';
+import Footer from '../components/Footer.vue';
 
 export default {
   name: 'Home',
-  components: { Carousel, LandingComponent },
+  components: { Carousel, LandingComponent, Footer },
   data(){
     return{
       animeRelease: "Animes Releases",
       animeUpcoming: "Animes Upcoming",
       animeAllTime: "Animes All Time Popular",
+      animeSuggestion: "Animes Suggestions",
       animeReleaseItems: [
         {animeTitle: 'Spy x Family Season 2', imageUrl: "src/assets/spyxfamily.jpg"},
         {animeTitle: 'Sousou no Frieren"', imageUrl: "https://i.pinimg.com/originals/86/b9/8e/86b98e631a28207ad97fed1d09382817.jpg"},
@@ -37,6 +38,12 @@ export default {
         {animeTitle: 'Hunter x Hunter', imageUrl: "https://i.pinimg.com/564x/b9/ef/0a/b9ef0ae3b860fd287e907491fddd560c.jpg"},
         {animeTitle: 'Attack on Titan', imageUrl: "https://i.pinimg.com/originals/7a/ff/f1/7afff1deae1a5ec0925e79190ba43a86.jpg"},
         {animeTitle: 'Death Note', imageUrl: "https://i.pinimg.com/564x/48/6c/92/486c9256c1774be99defb08a3181d86b.jpg"},
+      ],
+      animeSuggestionItems: [
+        {animeTitle: 'Sangatsu no Lion', imageUrl: 'https://i.pinimg.com/564x/4f/ee/26/4fee261c73d12c85fac8a32d1792cf92.jpg'},
+        {animeTitle: 'Blue Lock', imageUrl: 'https://i.pinimg.com/564x/fc/fe/73/fcfe73c08ce4b304a6b28b8d718ac7ed.jpg'},
+        {animeTitle: '86 - Eighty Six', imageUrl: 'https://i.pinimg.com/564x/32/f3/72/32f372c867f2843a133bd8ae379fd990.jpg'},
+        {animeTitle: 'Magi', imageUrl: 'https://i.pinimg.com/564x/a7/7e/33/a77e3344c78a2f6384d57c1d9f59cfc6.jpg'},
         
       ]
 
