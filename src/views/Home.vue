@@ -1,9 +1,11 @@
 <template>
   <Carousel />
-  <LandingComponent :title="animeRelease" :items="animeReleaseItems"/>
-  <LandingComponent :title="animeUpcoming" :items="animeUpcomingItems"/>
-  <LandingComponent :title="animeAllTime" :items="animeAllTimeItems"/>
-  <LandingComponent :title="animeSuggestion" :items="animeSuggestionItems" />
+  <div class="landings">
+    <LandingComponent :title="animeRelease" :items="animeReleaseItems" :style='paddingTop="60px"'/>
+    <LandingComponent :title="animeUpcoming" :items="animeUpcomingItems"/>
+    <LandingComponent :title="animeAllTime" :items="animeAllTimeItems"/>
+    <LandingComponent :title="animeSuggestion" :items="animeSuggestionItems" />
+  </div>
   <Footer />
 </template>
 
@@ -61,4 +63,12 @@ export default {
   z-index: 1;
 }
 
+.landings{
+  padding: 60px 0;
+  background-color: rgb(59, 59, 59);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 60px;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <section id="landing">
+    <section id="landing" :style="{ paddingTop: paddingTop }">
         <div class="landing-container">
             <div class="landing-header">
                 <h2>{{ title }}</h2>
@@ -22,14 +22,13 @@ export default{
     props: {
         title: Text,
         items: Array,
+        paddingTop: String,
     }
 }
 </script>
 
 <style lang="scss">
 #landing{
-    background-color: rgb(59, 59, 59);
-    padding: 60px 0;
     .landing-container{
         display: flex;
         flex-direction: column;
