@@ -41,11 +41,13 @@ export default{
     .landing-cards{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     .landing-header{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
         h2{
             font-size: 22px;
             font-weight: 400;
@@ -56,6 +58,31 @@ export default{
             color: white;
         }
     }
+}
 
+@media only screen and (max-width: 1180px) {
+    #landing{
+        .landing-container{
+            width: 580px;
+            margin: 0 auto;
+        }
+        .landing-cards{
+            gap: 40px;
+        }
+    }
+      
+}
+
+@media only screen and (max-width: 640px) {
+    #landing{
+        .landing-container{
+            width: 220px;
+            margin: 0 auto;
+        }
+        .landing-cards{
+            gap: 40px;
+        }
+    }
+      
 }
 </style>

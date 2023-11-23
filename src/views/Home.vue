@@ -41,7 +41,7 @@ export default {
       ],
       animeSuggestionItems: [
         {animeTitle: 'Sangatsu no Lion', imageUrl: 'https://i.pinimg.com/564x/4f/ee/26/4fee261c73d12c85fac8a32d1792cf92.jpg'},
-        {animeTitle: 'Blue Lock', imageUrl: 'https://i.pinimg.com/564x/fc/fe/73/fcfe73c08ce4b304a6b28b8d718ac7ed.jpg'},
+        {animeTitle: 'Blue Lock', imageUrl: 'https://i.pinimg.com/564x/85/d2/66/85d266f2eae7795d9c74cfdae05f2f81.jpg'},
         {animeTitle: '86 - Eighty Six', imageUrl: 'https://i.pinimg.com/564x/32/f3/72/32f372c867f2843a133bd8ae379fd990.jpg'},
         {animeTitle: 'Magi', imageUrl: 'https://i.pinimg.com/564x/a7/7e/33/a77e3344c78a2f6384d57c1d9f59cfc6.jpg'},
         

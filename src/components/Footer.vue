@@ -22,6 +22,8 @@ footer{
         align-items: center;
         justify-content: center;
         margin: 0 auto;
+        flex-wrap: wrap;
+        text-align: center;
         .rights{
             color: white;
             margin: 0px;
