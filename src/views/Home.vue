@@ -1,7 +1,7 @@
 <template>
   <Carousel />
   <div class="landings">
-    <LandingComponent :title="animeRelease" :items="animeReleaseItems" :style='paddingTop="60px"'/>
+    <LandingComponent :title="animeRelease" :items="animeReleaseItems"/>
     <LandingComponent :title="animeUpcoming" :items="animeUpcomingItems"/>
     <LandingComponent :title="animeAllTime" :items="animeAllTimeItems"/>
     <LandingComponent :title="animeSuggestion" :items="animeSuggestionItems" />

@@ -1,5 +1,5 @@
 <template>
-    <section id="landing" :style="{ paddingTop: paddingTop }">
+    <section id="landing">
         <div class="landing-container">
             <div class="landing-header">
                 <h2>{{ title }}</h2>
@@ -20,9 +20,14 @@ export default{
     name: "Landing",
     components: { Card },
     props: {
-        title: Text,
-        items: Array,
-        paddingTop: String,
+        title: {
+            type: String,
+            required: true,
+        },
+        items: {
+            type: Array,
+            required: true,
+        },
     }
 }
 </script>

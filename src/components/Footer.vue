@@ -28,7 +28,12 @@ footer{
             color: white;
             margin: 0px;
             a{
+                color: rgb(252, 47, 47);
                 text-decoration: none;
+                transition: 0.3s;
+            }
+            a:hover{
+                color: gray;
             }
         }
     }
