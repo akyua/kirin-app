@@ -5,7 +5,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
 
-                    <img src="@/assets/sousou.jpg" class="image d-block w-100" alt="...">
+                    <img src="@/assets/frieren.jpg" class="image d-block w-100" alt="...">
                     <div class="carousel-caption anime-highlight">
                         <h3 class="season">1 Season</h3>
                         <h2>Sousou no Frieren</h2>

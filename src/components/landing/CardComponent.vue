@@ -77,12 +77,12 @@ export default{
             &::before {
                 content: "";
                 position: absolute;
-                top: 50%;
-                right: 100%;
+                top: 30%;
+                left: -10%;
                 margin-top: -10px;
                 border-width: 10px;
                 border-style: solid;
-                border-color: transparent transparent transparent #2c2c2c;
+                border-color: transparent #2c2c2c transparent transparent;
             }
             &.fade-enter-active,
             &.fade-leave-active {
