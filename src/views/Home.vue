@@ -25,9 +25,9 @@ export default {
       animeSuggestion: "Animes Suggestions",
       animeReleaseItems: [
         {animeTitle: 'Spy x Family Season 2', imageUrl: "src/assets/spyxfamily.jpg"},
-        {animeTitle: 'Sousou no Frieren"', imageUrl: "https://i.pinimg.com/originals/86/b9/8e/86b98e631a28207ad97fed1d09382817.jpg"},
+        {animeTitle: 'Sousou no Frieren', imageUrl: "https://i.pinimg.com/originals/86/b9/8e/86b98e631a28207ad97fed1d09382817.jpg"},
         {animeTitle: 'Kage no Jitsuryokusha ni Naritakute! 2nd season', imageUrl: "https://i.pinimg.com/originals/a0/92/02/a092028da07f91f7f1d9f96361423f81.jpg"},
-        {animeTitle: 'Dr. STONE: NEW WORLD Part 2"', imageUrl: "https://i.pinimg.com/originals/15/41/0f/15410f02629eb449679013cb7fb34baf.jpg"},
+        {animeTitle: 'Dr. STONE: NEW WORLD Part 2', imageUrl: "https://i.pinimg.com/originals/15/41/0f/15410f02629eb449679013cb7fb34baf.jpg"},
       ],
       animeUpcomingItems: [
         {animeTitle: 'Solo Leveling', imageUrl: "https://i.pinimg.com/originals/9f/dc/be/9fdcbe10122eb360c1c73a57e69b2090.jpg"},

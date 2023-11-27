@@ -2,7 +2,7 @@
     <div class="card" @mouseover="showInfo" @mouseout="hideInfo">
         <a :href="cardLink" class="card-link">
             <img :src="imageUrl" alt="anime-banner">
-            <p>{{ animeTitle }}</p>
+            <p class="card-title">{{ animeTitle }}</p>
         </a>
         <transition name="fade">
             <div class="info" v-show="infoVisible">
@@ -45,6 +45,7 @@ export default{
         width: 250px;
         background-color: inherit;
         border: none;
+        
         .card-link{
             text-decoration: none;
             img{
@@ -55,6 +56,13 @@ export default{
             }
             p{
                 color: white;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        &:hover {
+            display: block;
+            .card-title {
+                color: red; // Adicione esta linha para alterar a cor do texto para vermelho
             }
         }
 
