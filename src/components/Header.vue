@@ -7,12 +7,12 @@
         </nav>
         <nav class="topics">
             <ul class="menu">
-                <li><a href="#">Animes</a></li>
-                <li><a href="#">Ranking</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">About</a></li>
+                <li><a class="menu-hover" href="#">Animes</a></li>
+                <li><a class="menu-hover" href="#">Ranking</a></li>
+                <li><a class="menu-hover" href="#">Reviews</a></li>
+                <li><a class="menu-hover" href="#">About</a></li>
                 <li>
-                    <a href="/login">
+                    <a class="login" href="/login">
                         <div id="user-icon">
                             <img src="../assets/user.png" alt="user" class="user-icon">
                         </div>
@@ -81,7 +81,7 @@ header {
   display: inline-block;
 }
 
-.menu a::before {
+.menu .menu-hover::before {
   content: "";
   position: absolute;
   bottom: -3px;

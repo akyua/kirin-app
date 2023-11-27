@@ -105,4 +105,10 @@ export default{
             display: block;
         }
     }
+
+@media screen and (max-width: 1540px) {
+  .info {
+    display: none !important;
+  }
+}
 </style>
