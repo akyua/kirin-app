@@ -1,46 +1,47 @@
 <template>
-    <h1>Animes</h1>
+    <input type="text" v-model="animeTitle" />
+    <button @click="searchAnimes">Search</button>
   
-    <table>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Episódios</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="anime in animes" :key="anime.mal_id">
-          <td>{{ anime.title }}</td>
-          <td>{{ anime.episodes }}</td>
-          <td>{{ anime.status }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <ul v-if="searchResults.length > 0">
+      <li v-for="anime in searchResults" :key="anime.mal_id">
+        {{ anime.title }}
+        <img :src="anime.images.jpg.image_url" alt="Anime Image">
+      </li>
+    </ul>
+  
+    <p v-else>No anime results found.</p>
   </template>
   
 <script>
-  import axios from 'axios';
+import AnimeService from '@backend/api/services/animeService';
 
   export default {
-  name: 'AnimeList',
+  name: 'AnimeSearch',
 
   data() {
     return {
-      animes: [],
+      animeTitle: '',
+      searchResults: [],
     };
   },
-  methods: {
-      async getAnimes() {
-        const response = await axios.get('https://api.jikan.moe/v4/anime');
-        console.log(response.data);
-        this.animes = response.data.data;
-      },
-  },
 
-  mounted() {
-    this.getAnimes();
-  },
+  methods: {
+    async searchAnimes() {
+      const animeService = new AnimeService(); // Instantiate the AnimeService class with the correct constructor
+      try {
+        const response = await animeService.searchAnime(this.animeTitle); // Call the searchAnime method on the instance
+        if (response.data.data) { // Check if the response contains an array of anime results
+          this.searchResults = response.data.data; // Update the searchResults array with the response
+          console.log(response.data)
+        } else {
+          this.searchResults = []; // Clear the searchResults array if no results are found
+          console.error('No anime results found.'); // Print an error message
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    },
+ }
 };
 </script>
   

@@ -7,7 +7,7 @@
         </nav>
         <nav class="topics">
             <ul class="menu">
-                <li><a class="menu-hover" href="#">Animes</a></li>
+                <li><a class="menu-hover" href="/anime-list">Animes</a></li>
                 <li><a class="menu-hover" href="#">Ranking</a></li>
                 <li><a class="menu-hover" href="#">Reviews</a></li>
                 <li><a class="menu-hover" href="#">About</a></li>
