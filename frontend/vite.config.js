@@ -15,6 +15,7 @@ export default defineConfig({
     include: ['jquery'],
   },
   server: {
+    port: 3000,
     proxy: {
       // Proxy setup if needed
     },

@@ -1,4 +1,5 @@
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
+import AnimeList from '@/views/AnimeList.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -12,6 +13,11 @@ const router = createRouter({
             path: '/login',
             name: 'login',
             component: () => import('../views/LoginView.vue')
+        },
+        {
+            path: '/anime-list',
+            name: 'anime-list',
+            component: AnimeList,
         }
     ]
 })
