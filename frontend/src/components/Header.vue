@@ -2,7 +2,7 @@
     <header>
         <nav id="logo">
             <a href="/">
-                <img src="/kirin2.png" alt="logo kirin">
+                <img src="/kirin_white.png" alt="logo kirin">
             </a>
         </nav>
         <nav class="topics">
@@ -41,6 +41,10 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+#logo{
+  margin-bottom: 16px;
 }
 
 #logo a img {

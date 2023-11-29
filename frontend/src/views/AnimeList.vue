@@ -1,4 +1,5 @@
 <template>
+  <Header />
     <input type="text" v-model="animeTitle" />
     <button @click="searchAnimes">Search</button>
   
@@ -13,10 +14,12 @@
   </template>
   
 <script>
+import Header from '@/components/Header.vue';
 import AnimeService from '@backend/api/services/animeService';
 
   export default {
   name: 'AnimeSearch',
+  components: { Header },
 
   data() {
     return {
