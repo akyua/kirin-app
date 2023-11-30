@@ -15,7 +15,7 @@ export default{
 <style lang="scss" scoped>
 footer{
     width: 100%;
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(16 16 16);
     padding: 20px 0;
     .footer-container{
         display: flex;

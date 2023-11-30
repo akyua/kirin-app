@@ -3,7 +3,7 @@
         <div class="landing-container">
             <div class="landing-header">
                 <h2>{{ title }}</h2>
-                <a href="season">View All</a>
+                <a href="anime-list">View All</a>
             </div>
             <div class="landing-cards">
                 <Card v-for="(item, index) in items" :key="index" :animeTitle="item.animeTitle" :imageUrl="item.imageUrl"/>

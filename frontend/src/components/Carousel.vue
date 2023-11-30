@@ -19,8 +19,8 @@
                         </div>
                         <div class="buttons-info">
                             <button class="button-watch">
-                                <img src="../assets/play.png" alt="play-icon">
-                                <p>Watch Now</p>
+                                <img src="../assets/site.png" alt="play-icon">
+                                <p>Page site</p>
                             </button> 
                             <button class="button-add">
                                 <img src="../assets/add.png" alt="add-icon">
@@ -44,8 +44,8 @@
                         </div>
                         <div class="buttons-info">
                             <button class="button-watch">
-                                <img src="../assets/play.png" alt="play-icon">
-                                <p>Watch Now</p>
+                                <img src="../assets/site.png" alt="play-icon">
+                                <p>Page site</p>
                             </button> 
                             <button class="button-add">
                                 <img src="../assets/add.png" alt="add-icon">
@@ -69,8 +69,8 @@
                         </div>
                         <div class="buttons-info">
                             <button class="button-watch">
-                                <img src="../assets/play.png" alt="play-icon">
-                                <p>Watch Now</p>
+                                <img src="../assets/site.png" alt="play-icon">
+                                <p>Page site</p>
                             </button> 
                             <button class="button-add">
                                 <img src="../assets/add.png" alt="add-icon">

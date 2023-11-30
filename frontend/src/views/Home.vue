@@ -65,7 +65,7 @@ export default {
 
 .landings{
   padding: 60px 0;
-  background-color: rgb(59, 59, 59);
+  background-color: rgb(31, 31, 31);
   display: flex;
   justify-content: center;
   flex-direction: column;
