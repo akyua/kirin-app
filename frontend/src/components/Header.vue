@@ -1,36 +1,34 @@
 <template>
-    <header>
-        <nav id="logo">
-            <a href="/">
-                <img src="/kirin_white.png" alt="logo kirin">
-            </a>
-        </nav>
-        <nav class="topics">
-            <ul class="menu">
-                <li><a class="menu-hover" href="/anime-list">Animes</a></li>
-                <li><a class="menu-hover" href="#">Ranking</a></li>
-                <li><a class="menu-hover" href="#">Reviews</a></li>
-                <li><a class="menu-hover" href="#">About</a></li>
-                <li>
-                    <a class="login" href="/login">
-                        <div id="user-icon">
-                            <img src="../assets/user.png" alt="user" class="user-icon">
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav id="logo">
+      <a href="/">
+        <img src="/kirin_white.png" alt="logo kirin" />
+      </a>
+    </nav>
+    <nav class="topics">
+      <ul class="menu">
+        <li><a class="menu-hover" href="/anime-list">Animes</a></li>
+        <li><a class="menu-hover" href="#">Ranking</a></li>
+        <li><a class="menu-hover" href="#">Reviews</a></li>
+        <li><a class="menu-hover" href="/about">About</a></li>
+        <li>
+          <a class="login" href="/login">
+            <div id="user-icon">
+              <img src="../assets/user.png" alt="user" class="user-icon" />
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script>
-export default{
-
-}
+export default {};
 </script>
 
 <style scoped lang="scss">
-@import '../variables/variables.scss';
+@import "../variables/variables.scss";
 
 header {
   position: absolute;
@@ -43,7 +41,7 @@ header {
   align-items: center;
 }
 
-#logo{
+#logo {
   margin-bottom: 16px;
 }
 
@@ -110,3 +108,4 @@ header {
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
 }
 </style>
+

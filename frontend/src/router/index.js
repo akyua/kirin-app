@@ -1,25 +1,36 @@
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
-import AnimeList from '@/views/AnimeList.vue';
+import {
+  createRouter,
+  createWebHashHistory,
+  createWebHistory,
+} from "vue-router";
+import AnimeList from "@/views/AnimeList.vue";
+import About from "@/views/About.vue";
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: () => import('../views/Home.vue')
-        },
-        {
-            path: '/login',
-            name: 'login',
-            component: () => import('../views/LoginView.vue')
-        },
-        {
-            path: '/anime-list',
-            name: 'anime-list',
-            component: AnimeList,
-        }
-    ]
-})
+  history: createWebHistory(),
+  routes: [
+    {
+      path: "/",
+      name: "home",
+      component: () => import("../views/Home.vue"),
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: () => import("../views/LoginView.vue"),
+    },
+    {
+      path: "/anime-list",
+      name: "anime-list",
+      component: AnimeList,
+    },
+    {
+      path: "/about",
+      name: "about",
+      component: About,
+    },
+  ],
+});
 
 export default router;
+
