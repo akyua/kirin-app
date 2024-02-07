@@ -73,7 +73,7 @@ main {
   background-color: rgb(31, 31, 31);
   min-height: 100vh;
   .container {
-    margin: 200px 0 0 0;
+    margin: 50px 0 0 0;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -111,4 +111,3 @@ main {
   }
 }
 </style>
-

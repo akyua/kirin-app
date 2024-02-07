@@ -1,5 +1,10 @@
 <template>
-  <header>
+  <header
+    :class="{
+      'main-page-header': isMainPage,
+      'other-page-header': !isMainPage,
+    }"
+  >
     <nav id="logo">
       <a href="/">
         <img src="/kirin_white.png" alt="logo kirin" />
@@ -24,13 +29,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    isMainPage: {
+      type: Boolean,
+      default: false,
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
 @import "../variables/variables.scss";
 
-header {
+.main-page-header {
   position: absolute;
   width: 100%;
   z-index: 2; /* Certifique-se de que o cabeçalho esteja sobre o carrossel */
@@ -39,6 +51,15 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.other-page-header {
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: inset 0px 20px 10px -10px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  padding-top: 20px;
+  background-color: rgb(31, 31, 31);
 }
 
 #logo {
@@ -108,4 +129,3 @@ header {
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
 }
 </style>
-
