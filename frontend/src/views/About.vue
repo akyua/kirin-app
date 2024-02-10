@@ -1,16 +1,14 @@
 <template>
-  <Header />
+  <Header :isMainPage="true" />
   <main>
     <section>
-      <h1>Who are we?</h1>
-      <h3>
-        We are a modern Anime Review/List Platform, committed to offering a
-        holistic space for anime enthusiasts to delve into, critique, and
-        converse about their beloved shows and movies. Being passionate fans
-        ourselves, we deeply grasp the significance of community-powered
-        platforms where users can exchange insights, recommendations, and
-        critiques with fellow anime aficionados.
-      </h3>
+      <div class="main-container">
+        <h2>Anime Kirin</h2>
+        <h3>
+          modern website dedicated to anime reviews, listings and community
+          engagement.
+        </h3>
+      </div>
     </section>
   </main>
 </template>
@@ -32,7 +30,7 @@ main {
   min-height: 100vh;
 }
 
-section {
+/* section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,5 +43,40 @@ section {
   width: 70%;
   height: fit-content;
   margin: 60px auto;
+} */
+
+section {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  background-image: url("@/assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+  height: 100vh;
+  color: white;
+  margin: 0 0 0 15%;
+}
+
+h3 {
+  max-width: 680px;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 52px;
 }
 </style>
