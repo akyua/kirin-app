@@ -11,21 +11,23 @@
       </div>
     </section>
   </main>
+  <Footer />
 </template>
 
 <script>
 import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   components: {
     Header,
+    Footer,
   },
 };
 </script>
 
 <style lang="scss" scoped>
 main {
-  display: flex;
   background-color: rgb(31, 31, 31);
   min-height: 100vh;
 }
@@ -49,7 +51,7 @@ section {
   object-fit: cover;
   width: 100%;
   height: 100vh;
-  background-image: url("@/assets/background.jpg");
+  background-image: url("@/assets/background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
