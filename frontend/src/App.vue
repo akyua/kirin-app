@@ -20,7 +20,7 @@
   scrollbar-color: #a7a7a7 #2e2e2e;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

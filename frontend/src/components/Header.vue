@@ -6,22 +6,26 @@
     }"
   >
     <nav id="logo">
-      <a href="/">
+      <router-link to="/">
         <img src="/kirin_white.png" alt="logo kirin" />
-      </a>
+      </router-link>
     </nav>
     <nav class="topics">
       <ul class="menu">
-        <li><a class="menu-hover" href="/anime-list">Animes</a></li>
-        <li><a class="menu-hover" href="#">Ranking</a></li>
-        <li><a class="menu-hover" href="#">Reviews</a></li>
-        <li><a class="menu-hover" href="/about">About</a></li>
         <li>
-          <a class="login" href="/login">
+          <router-link class="menu-hover" to="/anime-list">Animes</router-link>
+        </li>
+        <li>
+          <router-link class="menu-hover" to="/ranking">Ranking</router-link>
+        </li>
+        <li><router-link class="menu-hover" to="#">Reviews</router-link></li>
+        <li><router-link class="menu-hover" to="/about">About</router-link></li>
+        <li>
+          <router-link class="login" to="/login">
             <div id="user-icon">
               <img src="../assets/user.png" alt="user" class="user-icon" />
             </div>
-          </a>
+          </router-link>
         </li>
       </ul>
     </nav>
@@ -40,8 +44,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../variables/variables.scss";
-
 .main-page-header {
   position: absolute;
   width: 100%;
@@ -112,7 +114,7 @@ export default {
   transform: translateX(-50%);
   width: 0;
   height: 4px;
-  background-color: red; /* Cor da barra de destaque */
+  background-color: $primary-color; /* Cor da barra de destaque */
   border-radius: 20px;
   transition: width 0.4s; /* Duração da animação de crescimento */
 }

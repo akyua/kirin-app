@@ -5,6 +5,7 @@ import {
 } from "vue-router";
 import AnimeList from "@/views/AnimeList.vue";
 import About from "@/views/About.vue";
+import Ranking from "@/views/Ranking.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -29,8 +30,12 @@ const router = createRouter({
       name: "about",
       component: About,
     },
+    {
+      path: "/ranking",
+      name: "ranking",
+      component: Ranking,
+    },
   ],
 });
 
 export default router;
-

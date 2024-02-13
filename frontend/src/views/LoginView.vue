@@ -30,7 +30,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 main {
   display: flex;
   justify-content: center;
@@ -52,7 +52,9 @@ main {
     h2 {
       font-weight: 600;
       padding: 20px 0 40px 0;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+      text-transform: none;
+      font-size: 36px;
     }
     form {
       display: flex;
@@ -105,4 +107,3 @@ main {
   }
 }
 </style>
-
