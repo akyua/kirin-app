@@ -129,7 +129,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .anime-highlight {
   display: flex;
   flex-direction: column;
@@ -236,4 +236,3 @@ h2 {
   }
 }
 </style>
-
