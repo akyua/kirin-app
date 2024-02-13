@@ -1,38 +1,50 @@
 <template>
-    <header>
-        <nav id="logo">
-            <a href="/">
-                <img src="/kirin2.png" alt="logo kirin">
-            </a>
-        </nav>
-        <nav class="topics">
-            <ul class="menu">
-                <li><a class="menu-hover" href="/anime-list">Animes</a></li>
-                <li><a class="menu-hover" href="#">Ranking</a></li>
-                <li><a class="menu-hover" href="#">Reviews</a></li>
-                <li><a class="menu-hover" href="#">About</a></li>
-                <li>
-                    <a class="login" href="/login">
-                        <div id="user-icon">
-                            <img src="../assets/user.png" alt="user" class="user-icon">
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header
+    :class="{
+      'main-page-header': isMainPage,
+      'other-page-header': !isMainPage,
+    }"
+  >
+    <nav id="logo">
+      <router-link to="/">
+        <img src="/kirin_white.png" alt="logo kirin" />
+      </router-link>
+    </nav>
+    <nav class="topics">
+      <ul class="menu">
+        <li>
+          <router-link class="menu-hover" to="/anime-list">Animes</router-link>
+        </li>
+        <li>
+          <router-link class="menu-hover" to="/ranking">Ranking</router-link>
+        </li>
+        <li><router-link class="menu-hover" to="#">Reviews</router-link></li>
+        <li><router-link class="menu-hover" to="/about">About</router-link></li>
+        <li>
+          <router-link class="login" to="/login">
+            <div id="user-icon">
+              <img src="../assets/user.png" alt="user" class="user-icon" />
+            </div>
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script>
-export default{
-
-}
+export default {
+  props: {
+    isMainPage: {
+      type: Boolean,
+      default: false,
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
-@import '../variables/variables.scss';
-
-header {
+.main-page-header {
   position: absolute;
   width: 100%;
   z-index: 2; /* Certifique-se de que o cabeçalho esteja sobre o carrossel */
@@ -41,6 +53,19 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.other-page-header {
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: inset 0px 20px 10px -10px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  padding-top: 20px;
+  background-color: rgb(31, 31, 31);
+}
+
+#logo {
+  margin-bottom: 16px;
 }
 
 #logo a img {
@@ -89,7 +114,7 @@ header {
   transform: translateX(-50%);
   width: 0;
   height: 4px;
-  background-color: red; /* Cor da barra de destaque */
+  background-color: $primary-color; /* Cor da barra de destaque */
   border-radius: 20px;
   transition: width 0.4s; /* Duração da animação de crescimento */
 }
@@ -102,5 +127,7 @@ header {
   width: 60px;
   height: 60px;
   display: flex;
+  border-radius: 60%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
 }
 </style>
