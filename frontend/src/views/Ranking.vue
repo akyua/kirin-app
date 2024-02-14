@@ -28,33 +28,35 @@
       </div>
     </section>
     <section id="ranking">
-      <h2>Ranking</h2>
-      <ul>
-        <BannerComponent />
-      </ul>
+      <GridBanner />
     </section>
   </main>
 </template>
 
 <script>
 import Header from "../components/Header.vue";
-import BannerComponent from "../components/landing/BannerComponent.vue";
+import GridBanner from "../components/GridBanner.vue";
 export default {
   components: {
     Header,
-    BannerComponent,
+    GridBanner,
   },
 };
 </script>
 
 <style lang="scss">
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   background-color: $background-color;
+  padding-top: 25px;
+  min-height: 100vh;
 }
 #filter {
   display: flex;
-  justify-content: space-evenly;
-  max-width: 95%;
+  justify-content: space-between;
+  width: 90%;
   margin: 0 auto;
   div {
     width: 10%;
@@ -85,14 +87,6 @@ main {
 #ranking {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  h2 {
-    display: flex;
-    margin: 0 auto;
-    width: 90%;
-    text-align: center;
-    color: white;
-  }
   ul {
     padding: 0;
   }

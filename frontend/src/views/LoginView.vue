@@ -33,7 +33,7 @@ export default {
 <style lang="scss" scoped>
 main {
   display: flex;
-  justify-content: center;
+  align-items: center;
   background-color: rgb(31, 31, 31);
   height: 100vh;
   margin: 0;

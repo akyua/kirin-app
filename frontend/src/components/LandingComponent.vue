@@ -60,6 +60,7 @@ export default {
       font-size: 22px;
       font-weight: 400;
       text-shadow: none;
+      color: white;
     }
     a {
       text-decoration: none;
@@ -92,4 +93,3 @@ export default {
   }
 }
 </style>
-
