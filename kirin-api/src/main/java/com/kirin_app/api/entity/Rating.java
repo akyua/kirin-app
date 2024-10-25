@@ -1,5 +1,6 @@
 package com.kirin_app.api.entity;
 
+import com.kirin_app.api.domain.user.User;
 import jakarta.persistence.*;
 import lombok.Data;
 
