@@ -26,7 +26,6 @@
 <script>
 import Header from "@/components/Header.vue";
 import Card from "@/components/landing/CardComponent.vue";
-import AnimeService from "@backend/api/services/animeService";
 
 export default {
   name: "AnimeSearch",

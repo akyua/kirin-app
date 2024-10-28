@@ -3,15 +3,17 @@
   <main>
     <div class="login-container">
       <h2>Login</h2>
-      <form>
-        <input placeholder="Email" class="login-input" autocomplete="off" />
+      <form @submit.prevent="handleLogin">
+        <input placeholder="Email" class="login-input" autocomplete="off" v-model="formData.email" required/>
         <input
           type="password"
           placeholder="Password"
           class="login-input"
           autocomplete="off"
+          v-model="formData.password" 
+          required
         />
-        <div class="submit">Login</div>
+        <button class="submit" type="submit">Login</button>
       </form>
       <a href="/forgot" class="link-forgot">Forgot password?</a>
       <a href="/signup" class="link-create signup"
@@ -23,10 +25,29 @@
 
 <script>
 import Header from "../components/Header.vue";
+import { login } from '@/services/authService.js';
 
 export default {
   name: "Login",
   components: { Header },
+  data() {
+    return {
+      formData: {
+        email: '',
+        password: ''
+      }
+    };
+  },
+  methods: {
+    async handleLogin(){
+      try{
+        const data = await login(this.formData);
+        console.log('LOgin bem-sucedido:', data);
+      } catch(error){
+        console.error("Erro no login:", error);
+      }
+    }
+  }
 };
 </script>
 
