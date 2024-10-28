@@ -20,29 +20,35 @@
         >Not registered? <span>Create an account</span></a
       >
     </div>
+    <Notification v-if="notificationMessage" :message="notificationMessage" @close="notificationMessage = ''" />
   </main>
 </template>
 
 <script>
 import Header from "../components/Header.vue";
+import Notification from "../components/Notification.vue";
 import { login } from '@/services/authService.js';
 
 export default {
   name: "Login",
-  components: { Header },
+  components: { Header, Notification },
   data() {
     return {
       formData: {
         email: '',
         password: ''
-      }
+      },
+      notificationMessage: ''
     };
   },
   methods: {
     async handleLogin(){
       try{
-        const data = await login(this.formData);
-        console.log('LOgin bem-sucedido:', data);
+        await login(this.formData);
+        this.notificationMessage = 'Login sucessful!';
+        setTimeout(() => {
+          this.$router.push('/');
+        }, 1000);
       } catch(error){
         console.error("Erro no login:", error);
       }
