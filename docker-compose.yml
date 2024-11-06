@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  front:
+    build:
+      context: ./kirin-front
+    container_name: kirin_front
+    ports:
+      - "3000:3000"
+    networks:
+      - kirin_network
+
+  db:
+    image: mysql:8.0
+    container_name: kirin_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: kirin_bd
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: teste
+    ports:
+      - "3306:3306"
+    networks:
+      - kirin_network
+
+  api:
+    build:
+      context: ./kirin-api
+    container_name: kirin_api
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/kirin_bd
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: teste
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - kirin_network
+
+networks:
+  kirin_network:
+    driver: bridge
