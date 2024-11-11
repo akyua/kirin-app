@@ -19,7 +19,7 @@ services:
       MYSQL_USER: admin
       MYSQL_PASSWORD: teste
     ports:
-      - "3306:3306"
+      - "3307:3306"
     networks:
       - kirin_network
 
