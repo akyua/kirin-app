@@ -1,28 +1,35 @@
 package com.kirin_app.api.entity;
 
-public class Anime {
+import lombok.Data;
 
-    private Media media;  // Mapeamento da parte "media" da resposta
+@Data
+public class AniList {
+    private Data data;
 
-    public Media getMedia() {
-        return media;
-    }
 
-    public void setMedia(Media media) {
-        this.media = media;
+    public static class Data {
+        private Media media;
+
+
+        public Media getMedia() {
+            return media;
+        }
+
+        public void setMedia(Media media) {
+            this.media = media;
+        }
     }
 
     public static class Media {
-        private int id;
+        private String id;
         private Title title;
         private String description;
 
-        // Getters e Setters
-        public int getId() {
+        public String getId() {
             return id;
         }
 
-        public void setId(int id) {
+        public void setId(String id) {
             this.id = id;
         }
 
@@ -46,8 +53,8 @@ public class Anime {
     public static class Title {
         private String romaji;
         private String english;
+        private String nativeTitle;
 
-        // Getters e Setters
         public String getRomaji() {
             return romaji;
         }
@@ -62,6 +69,14 @@ public class Anime {
 
         public void setEnglish(String english) {
             this.english = english;
+        }
+
+        public String getNativeTitle() {
+            return nativeTitle;
+        }
+
+        public void setNativeTitle(String nativeTitle) {
+            this.nativeTitle = nativeTitle;
         }
     }
 }

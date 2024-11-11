@@ -13,9 +13,9 @@
     <div class="card-container">
       <Card
         v-for="anime in searchResults"
-        :key="anime.mal_id"
+        :key="anime.id"
         :animeTitle="anime.title"
-        :imageUrl="anime.images.jpg.image_url"
+        :imageUrl="anime.imageUrl"
       >
         {{ anime.title }}
       </Card>
@@ -44,20 +44,46 @@ export default {
         this.searchAnimes();
       }, 500);
     },
+
     async searchAnimes() {
-      const animeService = new AnimeService(); // Instantiate the AnimeService class with the correct constructor
       try {
-        const response = await animeService.searchAnime(this.animeTitle); // Call the searchAnime method on the instance
-        if (response.data.data) {
-          // Check if the response contains an array of anime results
-          this.searchResults = response.data.data; // Update the searchResults array with the response
-          console.log(response.data);
+        const response = await fetch(
+          "http://localhost:8080/api/animes/search",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name: this.animeTitle }),
+          },
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch anime data");
+        }
+
+        const animeData = await response.json();
+
+        // Certifique-se de acessar o campo correto
+        if (animeData.data && animeData.data.Media) {
+          this.searchResults = [
+            {
+              id: animeData.data.Media.id,
+              title:
+                animeData.data.Media.title.romaji ||
+                animeData.data.Media.title.english ||
+                animeData.data.Media.title.native,
+              description: animeData.data.Media.description,
+              // Você pode adicionar mais campos aqui, como imagem, se necessário
+            },
+          ];
         } else {
-          this.searchResults = []; // Clear the searchResults array if no results are found
-          console.error("No anime results found."); // Print an error message
+          console.error("A resposta não contém os dados esperados:", animeData);
+          this.searchResults = [];
         }
       } catch (error) {
-        console.error(error);
+        console.error("Erro ao buscar anime:", error);
+        this.searchResults = [];
       }
     },
   },
