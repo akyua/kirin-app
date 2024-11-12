@@ -1,53 +1,39 @@
 package com.kirin_app.api.entity;
 
 public class Anime {
+    private int id;
+    private Title title;
+    private String description;
 
-    private Media media;  // Mapeamento da parte "media" da resposta
-
-    public Media getMedia() {
-        return media;
+    public int getId() {
+        return id;
     }
 
-    public void setMedia(Media media) {
-        this.media = media;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public static class Media {
-        private int id;
-        private Title title;
-        private String description;
+    public Title getTitle() {
+        return title;
+    }
 
-        // Getters e Setters
-        public int getId() {
-            return id;
-        }
+    public void setTitle(Title title) {
+        this.title = title;
+    }
 
-        public void setId(int id) {
-            this.id = id;
-        }
+    public String getDescription() {
+        return description;
+    }
 
-        public Title getTitle() {
-            return title;
-        }
-
-        public void setTitle(Title title) {
-            this.title = title;
-        }
-
-        public String getDescription() {
-            return description;
-        }
-
-        public void setDescription(String description) {
-            this.description = description;
-        }
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public static class Title {
         private String romaji;
         private String english;
+        private String nativeTitle;
 
-        // Getters e Setters
         public String getRomaji() {
             return romaji;
         }
@@ -62,6 +48,14 @@ public class Anime {
 
         public void setEnglish(String english) {
             this.english = english;
+        }
+
+        public String getNativeTitle() {
+            return nativeTitle;
+        }
+
+        public void setNativeTitle(String nativeTitle) {
+            this.nativeTitle = nativeTitle;
         }
     }
 }
